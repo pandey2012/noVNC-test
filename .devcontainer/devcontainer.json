@@ -1,0 +1,16 @@
+{
+  "name": "noVNC Desktop",
+  "image": "://microsoft.com",
+  "features": {
+    "ghcr.io/devcontainers/features/desktop-lite:1": {
+      "version": "latest"
+    }
+  },
+  "forwardPorts":,
+  "portsAttributes": {
+    "6080": {
+      "label": "noVNC Web Interface",
+      "onAutoForward": "openBrowser"
+    }
+  }
+}
