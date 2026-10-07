@@ -1,18 +1,18 @@
 {
-  "name": "noVNC Desktop",
+  "name": "noVNC Desktop with Audio",
   "image": "ubuntu:22.04",
   "features": {    
     "ghcr.io/devcontainers/features/desktop-lite:1": {
       "version": "latest"
     }
   },
-  "forwardPorts": [],
+  "forwardPorts":[],
   "portsAttributes": {
     "6080": {
       "label": "noVNC Web Interface",
       "onAutoForward": "openBrowser"
     }
   },
-  "updateContentCommand": "sudo apt-get update && sudo apt-get install -y chromium-browser",
-  "postStartCommand": "DISPLAY=:1 chromium-browser --no-sandbox &"
+  "updateContentCommand": "sudo apt-get update && sudo apt-get install -y chromium-browser pulseaudio pavucontrol",
+  "postStartCommand": "pulseaudio --start --exit-idle-time=-1 && sleep 2 && DISPLAY=:1 chromium-browser --no-sandbox &"
 }
