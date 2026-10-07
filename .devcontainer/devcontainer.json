@@ -12,5 +12,7 @@
       "label": "noVNC Web Interface",
       "onAutoForward": "openBrowser"
     }
-  }
+  },
+  "updateContentCommand": "sudo apt-get update && sudo apt-get install -y chromium-browser",
+  "postStartCommand": "DISPLAY=:1 chromium-browser --no-sandbox &"
 }
