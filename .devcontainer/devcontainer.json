@@ -1,12 +1,12 @@
 {
   "name": "noVNC Desktop",
-  "image": "://microsoft.com",
-  "features": {
+  "image": "ubuntu:22.04",
+  "features": {    
     "ghcr.io/devcontainers/features/desktop-lite:1": {
       "version": "latest"
     }
   },
-  "forwardPorts":,
+  "forwardPorts": [],
   "portsAttributes": {
     "6080": {
       "label": "noVNC Web Interface",
